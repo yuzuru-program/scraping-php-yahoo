@@ -1,0 +1,12 @@
+name: CI
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: スクレイピング
+        run: |
+          git clone https://github.com/yuzuru-program/scraping-php-yahoo.git ci
+          cd ci
+          php index.php
